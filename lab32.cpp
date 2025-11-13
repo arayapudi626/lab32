@@ -23,7 +23,7 @@ for (int i = 0; i < tollBooth.size(); i++){
 //milestone 2:
 
 int time = 1;
-while(tollBooth.empty()){
+while(!tollBooth.empty()){
     int random = rand() % 100;
 
     if (random < 55){
@@ -31,8 +31,11 @@ while(tollBooth.empty()){
         tollBooth.front().print();
         tollBooth.pop_front();
     }
-    if (random < 45){
-
+    else{
+        Car newCar;
+        cout << "Time: " << time << "Operation: Joined lane: ";
+        newCar.print();
+        tollBooth.push_back(newCar);
     }
 }
 
