@@ -7,6 +7,9 @@ using namespace std;
 
 const int CAR = 2;
 const int LANES = 4;
+const int PAY = 46;
+const int JOIN = 39;
+const int SWITCH = 15;
 
 void printLane(deque<Car>& lane){
     if(lane.empty()){
@@ -55,13 +58,13 @@ for (int t = 1; t <= 20; t++){
         else {
             int r = rand() % 100;
 
-            if (r < 46){
+            if (r < PAY){
                 cout << "Lane: " << (i+1) << " Paid: ";
                 lanes[i].front().print();
                 lanes[i].pop_front();
             }
 
-            else if(r < 46+39) {
+            else if(r < PAY + JOIN) {
                 Car c;
                 cout << "Lane: " << (i+1) << " Joined: ";
                 c.print();
@@ -73,8 +76,9 @@ for (int t = 1; t <= 20; t++){
 
                 int d = i;
                 while (d==i){
-                int d = rand() % LANES;
+                d = rand() % LANES;
                 }
+
                 lanes[d].push_back(m);
                 cout << "Lane: " << (i+1) << " Switched: ";
                 m.print();
@@ -83,6 +87,7 @@ for (int t = 1; t <= 20; t++){
             }
 
         }
+        
         for(int i = 0; i < LANES; i++) {
             cout << "Lane " << (i+1) << " Queue: \n";
             printLane(lanes[i]);
