@@ -42,7 +42,7 @@ for (int i = 0; i < LANES; i++){
 }
 cout << endl;
 
-//Milestone 4:
+//milestone 4: simulations
 for (int t = 1; t <= 20; t++){
     cout <<"Time: " << t << endl;
 
@@ -87,7 +87,7 @@ for (int t = 1; t <= 20; t++){
             }
 
         }
-        
+
         for(int i = 0; i < LANES; i++) {
             cout << "Lane " << (i+1) << " Queue: \n";
             printLane(lanes[i]);
