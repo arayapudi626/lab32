@@ -11,16 +11,20 @@ const int LANES = 4;
 int main(){
 //milestone 1:
 srand(time(0));
-//array of deque
-deque<Car> [LANES];
+//array of deque: milestone 2
+deque<Car> lanes[LANES];
 
-for (int i = 0; i < CAR; i++){
-    tollBooth.push_back(Car());
+//milestone 3: 
+for (int i = 0; i < LANES; i++){
+    for (int j = 0; j < CAR; j++){
+        lanes[i].push_back(Car());
+    }
 }
 
 cout << "Initial queue: " << endl;
-for (int i = 0; i < tollBooth.size(); i++){
-    tollBooth[i].print();
+for (int i = 0; i < LANES; i++){
+    cout << "Lane" << (i+1) <<": ";
+    lanes[i].print();
 }
 
 //milestone 2:
