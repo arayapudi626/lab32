@@ -39,8 +39,43 @@ for (int i = 0; i < LANES; i++){
 }
 cout << endl;
 
+//Milestone 4:
+for (int t = 1; t <= 20; t++){
+    cout <<"Time: " << t << endl;
 
-int time = 1;
+    for (int i = 0; i < LANES; i++){
+        if (lanes[i].empty()) { //50/50 chance new car joins
+            if (rand() % 2 == 1) {
+                Car c;
+                cout << "Lane: " << (i+1) << " Joined lane: ";
+                c.print();
+                lanes[i].push_back(c);
+            }
+        }
+        else {
+            int r = rand() % 100;
+
+            if (r < 46){
+                cout << "Lane: " << (i+1) << " Paid: ";
+                lanes[i].front().print();
+                lanes[i].pop_front();
+            }
+            
+        }
+        }
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
 while(!tollBooth.empty()){
     int random = rand() % 100;
 
