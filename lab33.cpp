@@ -6,10 +6,13 @@
 using namespace std;
 
 const int CAR = 2;
+const int LANES = 4;
+
 int main(){
 //milestone 1:
 srand(time(0));
-deque<Car> tollBooth;
+//array of deque
+deque<Car> [LANES];
 
 for (int i = 0; i < CAR; i++){
     tollBooth.push_back(Car());
