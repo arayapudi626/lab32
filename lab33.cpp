@@ -80,11 +80,13 @@ for (int t = 1; t <= 20; t++){
             }
 
         }
-        for {
+        for(int i = 0; i < LANES; i++) {
+            cout << "Lane " << (i+1) << " Queue: \n";
+            printLane(lanes[i]);
         }
+        cout << endl;
     }
-
-
+    return 0;
 
 
 
@@ -94,7 +96,7 @@ for (int t = 1; t <= 20; t++){
 
 }
 
-
+/*
 while(!tollBooth.empty()){
     int random = rand() % 100;
 
@@ -124,4 +126,4 @@ time++;
 
 
 }
-}
+} */
