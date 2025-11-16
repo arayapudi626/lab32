@@ -60,7 +60,17 @@ for (int t = 1; t <= 20; t++){
                 lanes[i].front().print();
                 lanes[i].pop_front();
             }
-            
+
+            else if(r < 46+39) {
+                Car c;
+                cout << "Lane: " << (i+1) << " Joined: ";
+                c.print();
+                lanes[i].pop_back();
+            }
+            else {
+                
+            }
+
         }
         }
     }
