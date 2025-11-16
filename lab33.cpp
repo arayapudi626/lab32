@@ -68,10 +68,19 @@ for (int t = 1; t <= 20; t++){
                 lanes[i].pop_back();
             }
             else {
-                
+                Car m = lanes[i].back();
+                lanes[i].pop_back();
+
+                int d = rand() % LANES;
+                lanes[d].push_back(m);
+                cout << "Lane: " << (i+1) << " Switched: ";
+                m.print();
+                }
+
             }
 
         }
+        for {
         }
     }
 
