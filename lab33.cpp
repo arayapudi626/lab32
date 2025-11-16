@@ -74,9 +74,9 @@ for (int t = 1; t <= 20; t++){
                 Car m = lanes[i].back();
                 lanes[i].pop_back();
 
-                int d = i;
-                while (d==i){
-                d = rand() % LANES;
+                int d = rand() % (LANES - 1);
+                if (d>=i){
+                d++;
                 }
 
                 lanes[d].push_back(m);
@@ -94,6 +94,7 @@ for (int t = 1; t <= 20; t++){
         }
         cout << endl;
     }
+    cout << "All 20 done";
     return 0;
 
 }
