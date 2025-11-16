@@ -8,6 +8,17 @@ using namespace std;
 const int CAR = 2;
 const int LANES = 4;
 
+void printLane(deque<Car>& lane){
+    if(lane.empty()){
+        cout << "empty\n";
+        return;
+    }
+    for (int i = 0; i < lane.size(); i++){
+        lane[i].print();
+        }
+    }
+
+
 int main(){
 //milestone 1:
 srand(time(0));
@@ -24,10 +35,10 @@ for (int i = 0; i < LANES; i++){
 cout << "Initial queue: " << endl;
 for (int i = 0; i < LANES; i++){
     cout << "Lane" << (i+1) <<": ";
-    lanes[i].print();
+    printLane(lanes[i]);
 }
+cout << endl;
 
-//milestone 2:
 
 int time = 1;
 while(!tollBooth.empty()){
